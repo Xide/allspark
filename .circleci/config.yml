@@ -5,7 +5,7 @@ jobs:
       - image: circleci/python:3.7-stretch-node-browsers
     steps:
       - checkout
-      - command: make doc
+      - run: make doc
 workflows:
   version: 2
   build_and_test:
