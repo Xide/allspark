@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build_documentation:
+    docker:
+      - image: circleci/python:3.7-stretch-node-browsers
+    steps:
+      - checkout
+      - command: make doc
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build_documentation
